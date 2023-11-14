@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" type="text/css" href="/static/estiloej2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario Nombres</h1>
+        <form action="/ejemplo2" method="POST">
+
+            <label for="nombre1"><p>Nombre 1:</p></label>
+            <input type="text" id="nombre1" name="nombre1" required>
+            <br>
+
+            <label for="nombre2"><p>Nombre 2:</p></label>
+            <input type="text" id="nombre2" name="nombre2" required>
+            <br>
+
+            <label for="nombre3"><p>Nombre 3:</p></label>
+            <input type="text" id="nombre3" name="nombre3" required>
+            <br>
+
+            <button type="submit">Enviar</button>
+        </form>
+        {% if cantidad and largo %}
+        <div>
+            <p>El nombre con mayor cantidad de caracteres es: {{largo}}</p>
+            <p>El nombre tiene: {{cantidad}} caracteres</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
